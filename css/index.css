@@ -205,7 +205,7 @@
     text-align: center;
 }
 
-input{
+input, .fake-input {
     background-color: black;
     color: #33FFDA;
     border: 2px solid #33FFDA;

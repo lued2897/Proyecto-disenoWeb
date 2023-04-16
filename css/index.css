@@ -32,7 +32,7 @@
     margin-top: 1rem;
     width: 14rem;
     height: 2.5rem;
-    background-color: #252525; 
+    background-color: #252525;
     border: solid 0.25rem  white;
     border-radius: 0.5rem;
 }
@@ -57,7 +57,7 @@
     background-color: #f9245c;
     box-shadow: 2px 2px 2px #380110;
     margin-top: 0.1rem;
- 
+
  }
 
 #a{
@@ -103,11 +103,11 @@
     height: 5.5rem;
     background-color: black;
     padding-left: 0.6rem;
-    
+
 }
 
 .num{
-    color: #33FFDA; 
+    color: #33FFDA;
     margin-left: 0.6rem;
     margin-top: 0.5rem;
    text-align: center !important;
@@ -175,8 +175,21 @@
 .modalButton{
     background-color: black !important;
     border-radius: 50%;
-    padding: 1rem;
+    border: 0px;
     margin-right: 10px;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+}
+
+.modalButton:hover{
+    cursor: pointer;
+    background-color: #333333 !important
+}
+
+.modalButton img {
+    width: 16px;
+    height: 16px;
 }
 
 .modal-body{

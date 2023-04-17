@@ -12,6 +12,10 @@ teclado.addEventListener('click', (event) => {
 
     const tecla = event.target.id.slice('teclado-'.length);
 
+    if (tecla == 'C') {
+      pagar(mostrarPrecio(parseInt(codigoTecleado)));
+    }
+
     if (codigoTecleado.length < 3 && !isNaN(parseInt(tecla))) {
         codigoTecleado += tecla;
     }
@@ -32,11 +36,14 @@ function mostrarPrecio(codigo) {
 
     const el = document.getElementById(`codigo-${codigo}`);
     if (!el) {
-        precioFloat = (0.0).toFixed(2);
+        precio.innerText = '00.00';
+        precioFloat = null;
     } else {
         precioFloat = parseFloat(el.nextSibling.innerText.slice(2)).toFixed(2);
+        precio.innerText = precioFloat;
     }
 
-    precio.innerText = precioFloat;
+
+  return precioFloat;
 }
 

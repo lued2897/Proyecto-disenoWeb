@@ -1,16 +1,17 @@
 const billullo = document.getElementById('billullo');
 const moneda = document.getElementById('moneda');
+const dineroDiv = document.getElementById('dinero');
 
 let dinero = 0;
 
 billullo.addEventListener('click', () => {
     dinero += 20;
-    console.log(dinero);
+    dineroDiv.innerText = parseFloat(dinero).toFixed(2);
 });
 
 moneda.addEventListener('click', () => {
     dinero += 5;
-    console.log(dinero);
+    dineroDiv.innerText = parseFloat(dinero).toFixed(2);
 });
 
 function pagar(codigo) {
@@ -26,4 +27,5 @@ function pagar(codigo) {
     }
 
     dinero = 0;
+    dineroDiv.innerText = parseFloat(dinero).toFixed(2);
 }

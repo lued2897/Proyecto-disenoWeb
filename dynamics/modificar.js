@@ -14,9 +14,36 @@ modBoton.addEventListener('click', () => {
     code.value = code.value.trim();
     precio.value = precio.value.trim();
 
+    if (!nombre.value) {
+
+        console.log('lel');
+        const errorEl = document.getElementById('error-nombre-mod');
+        errorEl.style.display = 'block';
+    } else {
+        const errorEl = document.getElementById('error-nombre-mod');
+        errorEl.style.display = 'none';
+    }
+    if (!code.value) {
+        const errorEl = document.getElementById('error-code-mod');
+        errorEl.style.display = 'block';
+    } else  {
+        const errorEl = document.getElementById('error-code-mod');
+        errorEl.style.display = 'none';
+    }
+
+    if (!precio.value || isNaN(parseFloat(precio.value))) {
+        const errorEl = document.getElementById('error-precio-mod');
+        errorEl.style.display = 'block';
+    } else {
+        const errorEl = document.getElementById('error-precio-mod');
+        errorEl.style.display = 'none';
+    }
+
     if (!nombre.value || !code.value || !precio.value) {
+        console.log('asdf');
         return;
     }
+
 
     nombre.value = '';
     code.value = '';

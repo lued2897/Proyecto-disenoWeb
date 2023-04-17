@@ -1,4 +1,5 @@
 const loginBoton = document.getElementById('login-button');
+const errorEl = document.getElementById('error-admin');
 
 loginBoton.addEventListener('click', (event) => {
 
@@ -16,9 +17,10 @@ loginBoton.addEventListener('click', (event) => {
 
                 const menu = new bootstrap.Modal('#menuAdmin', {})
                 menu.show();
+
+                errorEl.style.display = 'none';
             } else {
-                // TODO: Mostrar errores
-                console.log('error al iniciar sesion');
+                errorEl.style.display = 'block';
             }
         });
 });

@@ -103,6 +103,7 @@
     align-items: center;
     padding: 5px;
     font-family: 'VT323', monospace;
+    font-size: xx-small;
 }
 
 #pantalla div {
@@ -249,6 +250,7 @@ input, .fake-input {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
     justify-content: space-evenly;
+    font-size: xx-small;
 }
 
 .fila2 span {

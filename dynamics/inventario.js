@@ -1,17 +1,4 @@
-let productos = [];
 const inventarioBody = document.getElementById('inventario-body');
-
-fetch('./db/inventario.json', {cache: 'no-cache'})
-    .then(data => {
-        return data.json();
-    })
-    .then(arr => {
-        productos = arr;
-        console.log(productos);
-    });
-
-
-const inventarioBoton = document.getElementById('inventario-button');
 
 inventarioBoton.addEventListener('click', () => {
     inventarioBody.innerHTML = '';

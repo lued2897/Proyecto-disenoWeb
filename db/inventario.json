@@ -1,32 +1,26 @@
 [
     {
-        "nombre": "Papu",
-        "cantidad": 10,
-        "venta": 19
+        "nombre": "Sabritas",
+        "cantidad": 19,
+        "venta": 16,
+        "precio": 16
     },
     {
-        "nombre": "Papu",
-        "cantidad": 10,
-        "venta": 19
+        "nombre": "Rancheritos",
+        "cantidad": 18,
+        "venta": 14,
+        "precio": 14
     },
     {
-        "nombre": "Papu",
-        "cantidad": 10,
-        "venta": 19
+        "nombre": "Doritos",
+        "cantidad": 22,
+        "venta": 20,
+        "precio": 20
     },
     {
-        "nombre": "Papu",
-        "cantidad": 10,
-        "venta": 19
-    },
-    {
-        "nombre": "Papu",
-        "cantidad": 10,
-        "venta": 19
-    },
-    {
-        "nombre": "Papu",
-        "cantidad": 10,
-        "venta": 19
+        "nombre": "Cheetos",
+        "cantidad": 32,
+        "venta": 14,
+        "precio": 14
     }
 ]

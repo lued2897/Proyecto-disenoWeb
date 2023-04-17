@@ -1,4 +1,16 @@
 /*  maquina expendedora  */
+#nomProyecto{
+    width: 8rem;
+    height: 4rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #FF0000;
+    margin: auto;
+    border-style: dashed;
+    border-color: #D9D9D9;
+    text-align: center;
+    color: white;
+}
 
 #maquina{
     width: 25rem;

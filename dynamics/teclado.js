@@ -12,6 +12,8 @@ teclado.addEventListener('click', (event) => {
 
     const tecla = event.target.id.slice('teclado-'.length);
 
+    const audio = new Audio('./sound/press.wav');
+    audio.play();
     if (tecla == 'C') {
       pagar(mostrarPrecio(parseInt(codigoTecleado)));
     }

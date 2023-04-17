@@ -7,8 +7,23 @@ botonCrear.addEventListener('click', () => {
     nombreInput.value = nombreInput.value.trim();
     mailInput.value = mailInput.value.trim();
 
-    if (!nombreInput.value || !mailInput.value) {
-        console.log('papu');
+    if (!nombreInput.checkValidity()) {
+
+        const errorEl = document.getElementById('error-nombre-nuevo-usuario');
+        errorEl.style.display = 'block';
+    } else {
+        const errorEl = document.getElementById('error-nombre-nuevo-usuario');
+        errorEl.style.display = 'none';
+    }
+    if (!mailInput.checkValidity()) {
+        const errorEl = document.getElementById('error-correo');
+        errorEl.style.display = 'block';
+    } else  {
+        const errorEl = document.getElementById('error-correo');
+        errorEl.style.display = 'none';
+    }
+
+    if (!mailInput.checkValidity() || !nombreInput.checkValidity()) {
         return;
     }
 

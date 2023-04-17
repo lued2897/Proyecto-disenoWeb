@@ -167,6 +167,9 @@
                             <div class="row d-flex justify-content-between">
                                 <span>Costo:</span><span>$<span id="precio">00.00</span></span>
                             </div>
+                            <div class="row d-flex justify-content-between">
+                                <span>Pagado:</span><span>$<span id="dinero">00.00</span></span>
+                            </div>
                         </div>
                         <div id="numeros">
                             <!-- <div class="container" style="padding: 0px; padding-top: 0.5% !important"> -->
@@ -237,9 +240,11 @@
             </div>
             <div class="modal-body">
                 <p>Nombre</p>
-                <input id="nombre-nuevo-usuario" type="text">
+                <input id="nombre-nuevo-usuario" type="text" required>
+                <div id="error-nombre-nuevo-usuario" class="invalid-feedback">El nombre es obligatorio</div>
                 <p>Email</p>
-                <input id="mail-nuevo-usuario" type="email">
+                <input id="mail-nuevo-usuario" type="email" required>
+                <div id="error-correo" class="invalid-feedback">Un correo válido es necesario</div>
                 <br><br>
                 <button type="button" id="crear-usuario-button" class="modalButton2">Crear</button>
             </div>
@@ -261,8 +266,8 @@
                     <input id="administrador-input" type="text">
                     <p>Contraseña</p>
                     <input id="pw-input" type="password">
+                    <div id="error-admin" class="invalid-feedback">Datos incorrectos...</div>
                     <br><br>
-                    <!-- <button type="button" id="login-button" class="modalButton2" data-bs-toggle="modal" data-bs-target="#menuAdmin">Login</button> -->
                     <button type="button" id="login-button" class="modalButton2">Login</button>
                 </div>
             </div>
@@ -330,10 +335,13 @@
                 <br>
                 <p>Nombre</p>
                 <input id="mod-nombre" type="text">
+                <div id="error-nombre-mod" class="invalid-feedback">El nombre es obligatorio</div>
                 <p>Code</p>
                 <input id="mod-code" type="text">
+                <div id="error-code-mod" class="invalid-feedback">El <i>code</i> es obligatorio</div>
                 <p>Precio</p>
                 <input id="mod-precio" type="text">
+                <div id="error-precio-mod" class="invalid-feedback">Un precio válido es obligatorio</div>
                 <p>Tipo</p>
                 <p>Seleccione una opcion:</p>
                 <select name="mod-tipo" id="tipo">

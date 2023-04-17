@@ -105,7 +105,7 @@
     margin-top: 0.5rem !important;
     margin: auto;
     width: 4rem;
-    height: 2rem;
+    /* height: 2rem; */
     background-color: black;
     color: #33FFDA;
     font-size: 0.45rem;
@@ -146,6 +146,7 @@
 .num:hover{
     background-color: #33FFDA;
     color: black;
+    cursor: pointer;
 }
 
 #ranura{
@@ -161,6 +162,10 @@
     height: 0.75rem;
     width: 2.5rem;
     background-color: black;
+}
+
+#billullo:hover {
+    cursor: pointer;
 }
 
 #ranura-billullo{
@@ -179,6 +184,10 @@
     background-color: black;
 }
 
+#moneda:hover {
+    cursor: pointer;
+}
+
 #ranura-moneda{
     margin-top: 0.15rem;
     width: 0.15rem;
@@ -190,6 +199,7 @@
 .modal{
     background-color: #f9245cA0;
     font-family: 'VT323', monospace;
+    overflow: scroll !important;
 }
 
 .modal-content{

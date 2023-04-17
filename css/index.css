@@ -97,23 +97,29 @@
     color: #33FFDA;
     font-size: 0.45rem;
     padding: 0.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
+#pantalla div {
+    width: 100%;
+    margin: auto;
 }
 
 #numeros{
-    margin-top: 0.5rem !important;
     margin: auto;
     width: 4rem;
     height: 5.5rem;
     background-color: black;
-    padding-left: 0.6rem;
 
 }
 
 .num{
     color: #33FFDA;
-    margin-left: 0.6rem;
-    margin-top: 0.5rem;
-   text-align: center !important;
+    margin: 0.25rem;
+    text-align: center !important;
     border-radius: 50%;
     width: 0.7rem;
     height: 0.7rem;
@@ -230,11 +236,6 @@ input, .fake-input {
     color: red;
 }
 
-span{
-    background-color: #f9245c;    
-    background-color:#D9D9D9;
-    margin-left: 1rem;
-}
 .fila2{
     background-color: #f9245c;
     width: 108%;
@@ -244,9 +245,14 @@ span{
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
 }
+
+.fila2 span {
+    background-color:#D9D9D9;
+    margin-left: 1rem;
+}
 .precio{
-    margin: 0px;
-    background-color:#252525;
+    margin: 0px !important;
+    background-color:#252525 !important;
     color: white;
 
 }

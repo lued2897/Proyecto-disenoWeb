@@ -149,31 +149,35 @@
                     <div id="panel-manejo">
                         <div id="logo">LOGO</div>
                         <div id="pantalla">
-                            Producto &nbsp &nbsp #CODE
-                            <br>
-                            Costo  &nbsp &nbsp &nbsp   $Precio
+                            <div class="row d-flex justify-content-between">
+                                <span>Producto:</span><span id="codigo">000</span>
+                            </div>
+                            <div class="row d-flex justify-content-between">
+                                <span>Costo:</span><span>$<span id="precio">00.00</span></span>
+                            </div>
                         </div>
                         <div id="numeros">
-                            <div class="container" style="padding: 0px; padding-top: 0.5% ! important">
-                                <div class="row">
-                                    <div class="num">1</div>
-                                    <div class="num">2</div>
-                                    <div class="num">3</div>
+                            <!-- <div class="container" style="padding: 0px; padding-top: 0.5% !important"> -->
+                            <div class="container mt-2">
+                                <div class="row d-flex justify-content-center">
+                                    <div id="teclado-1" class="num">1</div>
+                                    <div id="teclado-2" class="num">2</div>
+                                    <div id="teclado-3" class="num">3</div>
                                 </div>
-                                <div class="row">
-                                    <div class="num">4</div>
-                                    <div class="num">5</div>
-                                    <div class="num">6</div>
+                                <div class="row d-flex justify-content-center">
+                                    <div id="teclado-4" class="num">4</div>
+                                    <div id="teclado-5" class="num">5</div>
+                                    <div id="teclado-6" class="num">6</div>
                                 </div>
-                                <div class="row">
-                                    <div class="num">7</div>
-                                    <div class="num">8</div>
-                                    <div class="num">9</div>
+                                <div class="row d-flex justify-content-center">
+                                    <div id="teclado-7" class="num">7</div>
+                                    <div id="teclado-8" class="num">8</div>
+                                    <div id="teclado-9" class="num">9</div>
                                 </div>
-                                <div class="row">
-                                    <div class="num">0</div>
-                                    <div class="num">E</div>
-                                    <div class="num">C</div>
+                                <div class="row d-flex justify-content-center">
+                                    <div id="teclado-0" class="num">0</div>
+                                    <div id="teclado-E" class="num">E</div>
+                                    <div id="teclado-C" class="num">C</div>
                                 </div>
                             </div>
                         </div>
@@ -223,7 +227,7 @@
                 <p>Nombre</p>
                 <input id="nombre-nuevo-usuario" type="text">
                 <p>Email</p>
-                <input id="mail-nuevo-usuario" type="text">
+                <input id="mail-nuevo-usuario" type="email">
                 <br><br>
                 <button type="button" id="crear-usuario-button" class="modalButton2">Crear</button>
             </div>
@@ -246,7 +250,8 @@
                     <p>Contraseña</p>
                     <input id="pw-input" type="password">
                     <br><br>
-                    <button type="button" id="login-button" class="modalButton2" data-bs-toggle="modal" data-bs-target="#menuAdmin">Login</button>
+                    <!-- <button type="button" id="login-button" class="modalButton2" data-bs-toggle="modal" data-bs-target="#menuAdmin">Login</button> -->
+                    <button type="button" id="login-button" class="modalButton2">Login</button>
                 </div>
             </div>
             </div>
@@ -267,7 +272,7 @@
             <div class="modal-body">
                 <button type="button" id="lista-usuarios-button" class="modalButton2 botonMenu" data-bs-toggle="modal" data-bs-target="#listaCliente">Lista de usuarios</button>
                 <br><br>
-                <button type="button" class="modalButton2 botonMenu" data-bs-toggle="modal" data-bs-target="#modificarProducto">Modificar productos</button>
+                <button type="button" id="menu-modificar-productos-button" class="modalButton2 botonMenu" data-bs-toggle="modal" data-bs-target="#modificarProducto">Modificar productos</button>
                 <br><br>
                 <button id="inventario-button" type="button" class="modalButton2 botonMenu" data-bs-toggle="modal" data-bs-target="#mostrarInventario"> Inventario </button>
             </div>
@@ -312,23 +317,23 @@
                 <p>Ingresar nuevo producto</p>
                 <br>
                 <p>Nombre</p>
-                <input type="text">
+                <input id="mod-nombre" type="text">
                 <p>Code</p>
-                <input type="text">
+                <input id="mod-code" type="text">
                 <p>Precio</p>
-                <input type="text">
+                <input id="mod-precio" type="text">
                 <p>Tipo</p>
                 <p>Seleccione una opcion:</p>
-                <select name="tipo" id="tipo">
-                    <option value="cheetos">Cheetos</option>
-                    <option value="doritos">Doritos</option>
-                    <option value="rancheritos">Rancheritos</option>
-                    <option value="sabritas">Sabritas</option>
+                <select name="mod-tipo" id="tipo">
+                    <option value="Cheetos">Cheetos</option>
+                    <option value="Doritos">Doritos</option>
+                    <option value="Rancheritos">Rancheritos</option>
+                    <option value="Sabritas">Sabritas</option>
                 </select>
 
                 <br><br>
 
-                <button type="button" class="modalButton2 botonMenu" data-bs-toggle="modal" data-bs-target="#datoModificado"> CREAR </button>
+                <button id="modificar-button" type="button" class="modalButton2 botonMenu" > CREAR </button>
             </div>
         </div>
         </div>
@@ -348,16 +353,16 @@
             </button>
             </div>
             <div class="modal-body">
-            <p>Estos son los datos modificados</p>
-            <br>
-            <p>Nombre</p>
-            <input type="text" readonly>
-            <p>code</p>
-            <input type="text" readonly>
-            <p>precio</p>
-            <input type="text" readonly>
-            <p>tipo</p>
-            <input type="text" readonly>
+              <p>Estos son los datos modificados</p>
+              <br>
+              <p>Nombre</p>
+              <div id="nombre-producto-mod" class="fake-input"></div>
+              <p>Code</p>
+              <div id="code-producto-mod" class="fake-input"></div>
+              <p>Precio</p>
+              <div id="precio-producto-mod" class="fake-input"></div>
+              <p>Tipo</p>
+              <div id="tipo-producto-mod" class="fake-input"></div>
             </div>
         </div>
         </div>
@@ -392,11 +397,15 @@
 
 </body>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+<script src="./dynamics/index.js"></script>
+<script src="./dynamics/cliente.js"></script>
+<script src="./dynamics/menuAdmin.js"></script>
 <script src="./dynamics/iniciar-sesion.js"></script>
 <script src="./dynamics/crear-usuario.js"></script>
 <script src="./dynamics/lista-usuarios.js"></script>
+<script src="./dynamics/modificar.js"></script>
 <script src="./dynamics/inventario.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
 </html>

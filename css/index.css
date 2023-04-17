@@ -244,12 +244,14 @@ input, .fake-input {
     padding-left: 0.3rem;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
+    justify-content: space-evenly;
 }
 
 .fila2 span {
     background-color:#D9D9D9;
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
 }
+
 .precio{
     margin: 0px !important;
     background-color:#252525 !important;

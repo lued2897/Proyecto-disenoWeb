@@ -1,4 +1,3 @@
-let usuarios = [];
 const modalBody = document.getElementById('lista-usuarios-body');
 
 fetch('./db/usuarios.json', {cache: 'no-cache'})
@@ -7,12 +6,12 @@ fetch('./db/usuarios.json', {cache: 'no-cache'})
     })
     .then(arr => {
         usuarios = arr;
-        console.log('fetcheando');
-
     });
 
 modalBody.addEventListener('click', (event) => {
     if (event.target.classList.contains('delete')) {
+        const index = event.target.id.slice("usuario-lista-".length);
+        usuarios.splice(index, 1);
         event.target.parentElement.parentElement.remove();
     }
 
@@ -31,9 +30,9 @@ listaBoton.addEventListener('click', () => {
                 <div class="row mt-4">
                     <div class="col">
                         <p>Cliente</p>
-                        <div class="usuario-nombre fake-input">${usuario.nombre}</div>
+                        <div id="usuario-${i}-nombre" class="fake-input">${usuario.nombre}</div>
                         <p>email</p>
-                        <div class="usuario-mail fake-input">${usuario.mail}</div>
+                        <div id="usuario-${i}-nombre" class="fake-input">${usuario.mail}</div>
                     </div>
                     <div class="col">
                         <button id="usuario-lista-${i}" class="delete">DELETE</button>
